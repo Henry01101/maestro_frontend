@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    :root {
+    /* Modo Claro (default) */
+        --input-bg: #ffffff;
+        --input-text: #2E3031;
+        --input-p: #2E3031;
+        --input-border: #e5e7eb;
+        --etiqueta-a: #2E3031;
+        --etiqueta-span: #3a3a3a;
+    }
+    .dark {
+    /* Modo Oscuro */
+        --input-bg: #2E3031;
+        --input-text: #88CFE0;
+        --input-p: #88CFE0;
+        --input-border: #88CFE0;
+        --etiqueta-a: #88CFE0;
+        --etiqueta-span: #d6d6d6;
+    }
+    input, select, textarea {
+        @apply bg-[var(--input-bg)] text-[var(--input-text)] border-[var(--input-border)];
+    }
+    p {
+        @apply text-[var(--input-p)];
+        @apply cursor-default;
+    }
+    h1, h2, h3, h4, h5, h6, td, th, label, dd, dt{
+        @apply text-[var(--input-text)];
+        @apply cursor-default;
+    }
+    a {
+        @apply text-[var(--etiqueta-a)];
+        @apply cursor-default;
+    }
+    span, tspan{
+        @apply text-[var(--etiqueta-span)];
+        @apply cursor-default;
+    }
+    li, ul {
+        @apply bg-[var(--input-bg)];
+        @apply cursor-default;
+    }
+    ::v-deep .multiselect__input,
+    ::v-deep .multiselect__tags,
+    ::v-deep .multiselect__content-wrapper {
+        background: red !important;
+    }
+    .dark-mode{
+        @apply bg-[var(--input-bg)] text-[var(--input-text)] border-[var(--input-border)];
+    }
+}
